@@ -11,12 +11,7 @@ import org.springframework.stereotype.Service;
 public class ServiceImpl {
     ObjectMapper mapper = new ObjectMapper();
     ArrayList<Student> students=new ArrayList<Student>();
-    public Student switcher(String name,String surname){
-        Student student=new Student();
-        student.setName(name);
-        student.setSurname(surname);
-        return students.get(students.size()-1);
-    }
+
     public  ArrayList<Student> getStudents(){
         return students;
     }

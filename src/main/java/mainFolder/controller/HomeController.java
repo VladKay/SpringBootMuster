@@ -21,12 +21,6 @@ public class HomeController {
     @Autowired
     ServiceImpl service;
 
-    @GetMapping("/{name}/{surname}")
-    public ResponseEntity<Student> getIndex(@PathVariable(name = "name") String name,
-            @PathVariable(name = "surname") String surname) {
-        return ResponseEntity.ok(service.switcher(name, surname));
-    }
-
     @GetMapping("/list")
     public ResponseEntity<ArrayList<Student>> getStudents() {
         return ResponseEntity.ok(service.getStudents());
