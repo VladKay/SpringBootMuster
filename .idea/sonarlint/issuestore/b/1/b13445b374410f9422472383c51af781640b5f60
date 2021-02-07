@@ -1,0 +1,10 @@
+
+®
+java:S1130"‹Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException', as it cannot be thrown from method's body.(·Äó£ÿÿÿÿÿ8™Õïë÷.
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(…ó¨ûøÿÿÿÿ8»””æ÷.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û©Õ¹þÿÿÿÿ8êŽœê÷.
+;
+java:S1128"Remove this duplicated import.(´‘¨™8¦®Üê÷.
+b
+java:S2184"@Cast one of the operands of this addition operation to a "long".(ôî³âýÿÿÿÿ8™Õïë÷.
