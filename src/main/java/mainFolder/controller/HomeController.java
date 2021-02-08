@@ -34,4 +34,8 @@ public class HomeController {
     public ResponseEntity<String> deleteStudent(@PathVariable (name="id") long id) throws JsonProcessingException {
         return ResponseEntity.ok(service.deleteStudent(id));
     }
+    @GetMapping("/get")
+    public ResponseEntity<String> getTest(){
+        return ResponseEntity.ok(service.getPostsPlainJSON());
+    }
 }
