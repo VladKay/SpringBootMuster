@@ -9,3 +9,11 @@ g
 7src/main/java/mainFolder/controller/HomeController.java,d\f\df61cbc1861f4e36ca463f7a2c2523c94d615ee9
 a
 1src/main/java/mainFolder/service/ServiceImpl.java,b\1\b13445b374410f9422472383c51af781640b5f60
+‚
+Rtarget/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst,8\a\8ae396f369da14bb5c0973286facff8fb2c70d56
+€
+Ptarget/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst,3\d\3da01db98b88a8057c03354880f06dba49d3e795
+T
+$target/maven-archiver/pom.properties,5\a\5acbe6c306dee4498a010b1ca2096853e29e16a4
+D
+SpringBootMuster.iml,1\5\153d4b679fd7b66fdb36cdeed0c521d7f40287fa

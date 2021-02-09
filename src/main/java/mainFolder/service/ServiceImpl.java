@@ -6,6 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mainFolder.controller.models.Student;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -47,5 +51,18 @@ public class ServiceImpl {
         RestTemplateBuilder restTemplateBuilder=new RestTemplateBuilder();
         restTemplate=restTemplateBuilder.build();
         return restTemplate.getForObject(url, String.class);
+    }
+
+    public String getAllBusinesses() {
+        String url = "https://interact.leadforensics.com/WebApi_v2/Business/GetAllBusinesses?datefrom=10-05-2016 00:00:00&dateto=12-06-2016 23:59:59&pagesize=5&pageno=1";
+        RestTemplate restTemplate= new RestTemplate();
+        RestTemplateBuilder restTemplateBuilder=new RestTemplateBuilder();
+        restTemplate=restTemplateBuilder.build();
+        HttpHeaders headers=new HttpHeaders();
+        headers.set("Authorization-Token","8kqVjkvDKLirolRWTDyYroX");
+        headers.set("ClientID","167316");
+        HttpEntity request= new HttpEntity(headers);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, request,String.class);
+        return response.getBody();
     }
 }

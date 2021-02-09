@@ -1,10 +1,23 @@
 
-®
-java:S1130"‹Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException', as it cannot be thrown from method's body.(·Äó£ÿÿÿÿÿ8™Õïë÷.
-’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(…ó¨ûøÿÿÿÿ8»””æ÷.
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û©Õ¹þÿÿÿÿ8êŽœê÷.
-;
-java:S1128"Remove this duplicated import.(´‘¨™8¦®Üê÷.
 b
-java:S2184"@Cast one of the operands of this addition operation to a "long".(ôî³âýÿÿÿÿ8™Õïë÷.
+java:S2184 "@Cast one of the operands of this addition operation to a "long".(ôî³âýÿÿÿÿ8¥æ¨í÷.
+®
+java:S1130%"‹Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException', as it cannot be thrown from method's body.(·Äó£ÿÿÿÿÿ8¥æ¨í÷.
+L
+java:S3740@"/Provide the parametrized type for this generic.(§á½ˆ8ÜŽÄ¶ø.
+L
+java:S3740@"/Provide the parametrized type for this generic.(§á½ˆ8ÜŽÄ¶ø.
+]	java:S1250"<This block of commented-out lines of code should be removed.(ÏÿŽÚüÿÿÿÿ8¶»•Žø.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û©Õ¹þÿÿÿÿ8¥æ¨í÷.
+]	java:S125"<This block of commented-out lines of code should be removed.(ÿ€ú“ÿÿÿÿÿ8Î­üø.
+\
+java:S18542"@Remove this useless assignment to local variable "restTemplate".(— ’8¯Ìýø.
+\
+java:S1854:"@Remove this useless assignment to local variable "restTemplate".(— ’8¾¾®¶ø.
+]	java:S125"<This block of commented-out lines of code should be removed.(·÷‰Íüÿÿÿÿ8˜ùûø.
+;
+java:S1128"Remove this duplicated import.(´‘¨™8¥æ¨í÷.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸¹™Çøÿÿÿÿ8˜ùûø.
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(…ó¨ûøÿÿÿÿ8¥æ¨í÷.

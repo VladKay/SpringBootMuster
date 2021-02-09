@@ -38,4 +38,8 @@ public class HomeController {
     public ResponseEntity<String> getTest(){
         return ResponseEntity.ok(service.getPostsPlainJSON());
     }
+    @GetMapping("/getAllBuisenesses")
+    public ResponseEntity<String> getAllBuisnesses(){
+        return ResponseEntity.ok(service.getAllBusinesses());
+    }
 }
