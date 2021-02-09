@@ -67,4 +67,7 @@ public class ServiceImpl {
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
         return response.getBody();
     }
+    public String getPullRequest(){
+        return "Pull Request";
+    }
 }
