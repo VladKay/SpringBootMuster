@@ -48,4 +48,8 @@ public class ServiceImpl {
         restTemplate=restTemplateBuilder.build();
         return restTemplate.getForObject(url, String.class);
     }
+    public  String getBeispiel(){
+        return "beispiel";
+    }
+
 }
