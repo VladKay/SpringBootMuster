@@ -66,7 +66,6 @@ public class ServiceImpl {
         HttpEntity request= new HttpEntity(headers);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, request,String.class);
         return response.getBody();
-
     }
 
 }
