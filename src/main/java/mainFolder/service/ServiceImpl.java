@@ -70,4 +70,12 @@ public class ServiceImpl {
     public String getPullRequest(){
         return "Pull Request";
     }
+
+
+    public String hallo(){
+        return "hallo";
+    }
+
+
+
 }
