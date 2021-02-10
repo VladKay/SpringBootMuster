@@ -50,6 +50,8 @@ public class ServiceImpl {
         RestTemplate restTemplate =new RestTemplate();
         RestTemplateBuilder restTemplateBuilder=new RestTemplateBuilder();
         restTemplate=restTemplateBuilder.build();
+
+
         return restTemplate.getForObject(url, String.class);
     }
     public  String getBeispiel() {
