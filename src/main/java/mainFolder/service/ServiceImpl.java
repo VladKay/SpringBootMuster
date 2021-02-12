@@ -1,10 +1,14 @@
 package mainFolder.service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mainFolder.controller.models.Student;
+import mainFolder.controller.models.VisitDto;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -25,6 +29,30 @@ public class ServiceImpl {
 
     public  ArrayList<Student> getStudents(){
         return students;
+    }
+
+    public  Student getStudent(){
+        Student vlad=new Student();
+        vlad.setId(1);
+        vlad.setName("vlad");
+        vlad.setSurname("hyrov");
+        return vlad;
+    }
+
+    public VisitDto getVisit(){
+        VisitDto visit=new VisitDto();
+        visit.setBusinessid("1");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime localDateTime= LocalDateTime.now();
+        visit.setEnddatetime(dtf.format(localDateTime));
+        visit.setStartdatetime(dtf.format(localDateTime));
+        visit.setKeywords("key");
+        visit.setMulti(1);
+        visit.setPages(1);
+        visit.setReferrerlink("referrerlink");
+        visit.setReferrername("referrername");
+        visit.setVisitid("1");
+        return visit;
     }
 
     public String addStudent(String jsonObject) throws JsonProcessingException {

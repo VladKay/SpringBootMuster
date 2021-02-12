@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import mainFolder.controller.models.Student;
+import mainFolder.controller.models.VisitDto;
 import mainFolder.service.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @Autowired
     ServiceImpl service;
+
+    @GetMapping("/getStudent")
+    public ResponseEntity<Student> getStudent() {
+        return ResponseEntity.ok(service.getStudent());
+    }
 
     @GetMapping("/list")
     public ResponseEntity<ArrayList<Student>> getStudents() {
@@ -42,4 +48,9 @@ public class HomeController {
     public ResponseEntity<String> getAllBuisnesses(){
         return ResponseEntity.ok(service.getAllBusinesses());
     }
+    @GetMapping("/getVisit")
+    public ResponseEntity<VisitDto>getVisit(){
+        return ResponseEntity.ok(service.getVisit());
+    }
+
 }
