@@ -3,6 +3,7 @@ package mainFolder.controller;
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import mainFolder.controller.models.BusinessDto;
 import mainFolder.controller.models.Student;
 import mainFolder.controller.models.VisitDto;
 import mainFolder.service.ServiceImpl;
@@ -44,13 +45,21 @@ public class HomeController {
     public ResponseEntity<String> getTest(){
         return ResponseEntity.ok(service.getPostsPlainJSON());
     }
+
     @GetMapping("/getAllBuisenesses")
     public ResponseEntity<String> getAllBuisnesses(){
         return ResponseEntity.ok(service.getAllBusinesses());
     }
+
     @GetMapping("/getVisit")
     public ResponseEntity<VisitDto>getVisit(){
         return ResponseEntity.ok(service.getVisit());
     }
+
+
+// Endpoint von Alperen und Emre
+    @GetMapping("/BusinessDto")
+    public ResponseEntity<BusinessDto>createBusiness() { return ResponseEntity.ok(service.createBusiness()); }
+
 
 }

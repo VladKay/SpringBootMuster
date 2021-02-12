@@ -1,14 +1,11 @@
 package mainFolder.service;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mainFolder.controller.models.BusinessDto;
 import mainFolder.controller.models.Student;
-import mainFolder.controller.models.VisitDto;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -29,30 +26,6 @@ public class ServiceImpl {
 
     public  ArrayList<Student> getStudents(){
         return students;
-    }
-
-    public  Student getStudent(){
-        Student vlad=new Student();
-        vlad.setId(1);
-        vlad.setName("vlad");
-        vlad.setSurname("hyrov");
-        return vlad;
-    }
-
-    public VisitDto getVisit(){
-        VisitDto visit=new VisitDto();
-        visit.setBusinessid("1");
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime localDateTime= LocalDateTime.now();
-        visit.setEnddatetime(dtf.format(localDateTime));
-        visit.setStartdatetime(dtf.format(localDateTime));
-        visit.setKeywords("key");
-        visit.setMulti(1);
-        visit.setPages(1);
-        visit.setReferrerlink("referrerlink");
-        visit.setReferrername("referrername");
-        visit.setVisitid("1");
-        return visit;
     }
 
     public String addStudent(String jsonObject) throws JsonProcessingException {
@@ -99,6 +72,32 @@ public class ServiceImpl {
         return "Pull Request";
     }
 
+
+
+// Klasse zum Übergeben der Werte von GetBusiness
+    public BusinessDto createBusiness(){
+        BusinessDto business = new BusinessDto();
+
+        business.setBusinessID(1);
+        business.setName("Bonafide Bones The Butcher");
+        business.setAdressLine1("Landsdown Road");
+        business.setAdressLine2("Willesborough");
+        business.setAdressLine3("");
+        business.setLocality("");
+        business.setTown("Ashford");
+        business.setCounty("Kent");
+        business.setPostCode("TN7 OPZ");
+        business.setCountry("United Kingdom");
+        business.setTelephone("01233 2349 234");
+        business.setWebsite("http://www.bonafide-bones-the-butcher.co.uk");
+        business.setIndustry("Butcher");
+        business.setSICCode("1123");
+        business.setTurnover("12231");
+        business.setRegistrationNumber("1341");
+        business.setEmployeeNumber("1-20");
+
+        return business;
+    }
 }
 
 
