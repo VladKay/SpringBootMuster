@@ -22,6 +22,7 @@ public class ServiceImpl {
     //private RestTemplate restTemplate;
     private final ObjectMapper mapper = new ObjectMapper();
     ArrayList<Student> students=new ArrayList<Student>();
+    private static int counter=0;
     public ServiceImpl(){}
     /*public ServiceImpl(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
@@ -32,10 +33,11 @@ public class ServiceImpl {
     }
 
     public  Student getStudent(){
+        counter++;
         Student vlad=new Student();
         vlad.setId(1);
         vlad.setName("vlad");
-        vlad.setSurname("hyrov");
+        vlad.setSurname("hyrov"+counter);
         return vlad;
     }
 
